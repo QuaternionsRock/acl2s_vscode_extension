@@ -1,0 +1,25 @@
+{
+    "name": "acl2s",
+    "displayName": "ACL2s",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "acl2s",
+            "aliases": ["ACL2s", "acl2s"],
+            "extensions": [".lisp",".a2s"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "acl2s",
+            "scopeName": "source.acl2s",
+            "path": "./syntaxes/acl2s.tmLanguage.json"
+        }]
+    }
+}

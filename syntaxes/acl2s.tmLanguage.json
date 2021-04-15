@@ -1,0 +1,67 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ACL2s",
+	"firstLineMatch": " ; \\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\* BEGIN INITIALIZATION FOR ACL2s MODE \\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\* ;",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.acl2s",
+					"match": "\\b(if|while|for|return)\\b"
+				},
+				{
+					"name":"keyword.other.acl2s",
+					"match": "(?i:(DEFINE-CONDITION|DEFSTRUCT|DEFREFINEMENT|DEFTHM|DEFDOC|DEFSTOBJ|DEFCONST|DEFEVALUATOR|DEFVAR|DEFMACRO|DEFUN|DEFGENERIC|DEFINE-PC-HELP|DEFSTUB|DEFCONSTANT|DEFSETF|DEFABBREV|DEFPARAMETER|DEFINE-PC-ATOMIC-MACRO|DEFINE-COMPILER-MACRO|DEFEXEC|DEFTHMD|DEFCHOOSE|DEFUNS|DEFCLASS|DEFUND|DEFINE-METHOD-COMBINATION|DEFLABEL|DEFUN-SK|DEFTHEORY|DEFINE-SETF-EXPANDER|DEFAXIOM|DEFINE-PC-MACRO|DEFTYPE|DEFINE-MODIFY-MACRO|DEFEQUIV|DEFPKG|DEFTTAG|DEFCONG|DEFINE-SYMBOL-MACRO|DEFPACKAGE|DEFMETHOD))"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.acl2s",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.acl2s",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.single-semicolon",
+					"match": ";{1}.*$"
+				},
+				{
+					"name": "comment.line.double-semicolon",
+					"match": ";{2}.*$"
+				},
+				{
+					"name": "comment.line.triple-semicolon",
+					"match": ";{3}.*$"
+				},
+				{
+					"name": "comment.line.quadruple-semicolon",
+					"match": ";{4}.*$"
+				},
+				{
+					"name": "comment.block",
+					"begin": "#\\|",
+					"end": "\\|#"
+				}
+			]
+		}
+	},
+	"scopeName": "source.acl2s"
+}
